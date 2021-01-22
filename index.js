@@ -18,7 +18,7 @@ The function should:
 function createMenuItem(name, price, category) {
   return { name, price, category};
 }
-console.log (createMenuItem('tacos', 8, 'lunch'))
+console.log(createMenuItem('tacos', 8, 'lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -74,10 +74,10 @@ const reviews = [
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
-  1. log only Julius' feedback to the console - no function needed 
+  1. log only Julius' feedback to the console - no function needed.
 */
 
-console.log(reviews[5].feedback);
+console.log(reviews[5].feedback)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -86,7 +86,8 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-console.log(reviews.push( 'name', 'price', 'catagory'));
+reviews.push({name: "Tim", rating: 5, feedback: "Super sweet"});
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -94,7 +95,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews)
 
 
 
@@ -110,9 +112,9 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(reviews, num) {
-   return `Daniel gave the restauant a ${rating} star review, and their feedback was ${feedback}`
+   return (`Daniel gave the restauant a ${rating} star review, and their feedback was ${feedback}`)
 }
-
+console.log(getReviewByIndex)
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -127,10 +129,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(reviews, index) {
-  return (reviews[-1])
+function getLastReview(reviews) {
+  let aString = arr[arr.length -1]
+    return aString (`${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`)
 } 
-
+console.log(getLastReview[reviews]);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
