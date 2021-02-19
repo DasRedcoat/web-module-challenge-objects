@@ -16,9 +16,7 @@ The function should:
 */
 
 function createMenuItem(name, price, category) {
-  let tacos = {};
-  tacos = {name, price, category};
-    return tacos;
+  return {name, price, category};
 }
 // console.log(createMenuItem(taco, 8, lunch));
 
@@ -34,28 +32,11 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-bagels = {
-  name: "bagels",
-  price: 4,
-  category: "breakfast"
-},
-
-pizza = {
-  name: "pizza",
-  price: 5,
-  category: "lunch"
-},
-
-steak = {
-  name: "steak",
-  price: 20,
-  category : "dinner"
-},
 
 
-// let bagels = function createMenuItem {("bagels", 4, "breakfast")},
-// let pizza = function createMenuItem {("pizza", 5, "lunch")},
-// let steak = function createMenuItem {("steak", 20, "dinner")},
+let bagels = createMenuItem("bagels", 4, "breakfast");
+let pizza =  createMenuItem("pizza", 5, "lunch");
+let steak =  createMenuItem("steak", 20, "dinner");
 
 
 
@@ -75,14 +56,19 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
+  category: "Lunch",
   discount: function(person) {
-    if ( person = "teacher") {
-      return (price * .25);
-    } else if (person = "student") {
-      return (burger.price * .25)
+    if (person === "teacher") {
+      return (this.price * .25);
+    } else if (person === "student") {
+      return (this.price * .25);
+    } else if (person === "public") {
+        return (this.price * .10);
     }
-},
+  }
+}
+
+console.log(burger.discount("teacher"))
 
 
 
@@ -103,7 +89,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
